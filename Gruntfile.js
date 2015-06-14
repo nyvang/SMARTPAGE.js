@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: '/*Name: <%= pkg.name %> \nBuild: <%= pkg.version %> \nDate: <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
       dist: {
         files: {
@@ -22,9 +22,12 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'src/**/*.js'],
       options: {
-        // options here to override JSHint defaults
+        curly: true,
+        eqeqeq: true,
+        browser: true,
+        eqnull: true,
         globals: {
           jQuery: true,
           console: true,
@@ -44,8 +47,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('test', ['jshint']);
-
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('dist', ['concat:dist', 'uglify:dist']);
+  grunt.registerTask('default', ['concat', 'uglify']);
 
 };
