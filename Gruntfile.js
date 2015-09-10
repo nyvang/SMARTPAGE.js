@@ -36,9 +36,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    shell: {
+      smartcomments: {
+          command: 'node ./node_modules/smartcomments/bin/smartcomments --generate -t ./api-documentation/SMARTPAGE-API.<%= pkg.name %>.<%= pkg.version %>.html'
+      }
+    },
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
+     // files: ['<%= jshint.files %>'],
+     // tasks: ['jshint']
     }
   });
 
@@ -47,7 +52,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('dist', ['concat:dist', 'uglify:dist']);
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('dist', ['concat:dist', 'uglify:dist', 'jshint:files', 'shell:smartcomments']);
+  grunt.registerTask('default', ['concat', 'uglify', 'watch']);
 
 };

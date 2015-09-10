@@ -1,0 +1,476 @@
+{
+    "project": {},
+    "files": {
+        "ext-libs\\jQuery-Equal-Heights.js": {
+            "name": "ext-libs\\jQuery-Equal-Heights.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "ext-libs\\pxToEm.js": {
+            "name": "ext-libs\\pxToEm.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "CachedSlideshow.js": {
+            "name": "CachedSlideshow.js",
+            "modules": {
+                "CachedSlidehow": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "CookieHandler.js": {
+            "name": "CookieHandler.js",
+            "modules": {
+                "CookieHandler": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "EqualRowHeights.js": {
+            "name": "EqualRowHeights.js",
+            "modules": {
+                "EqualizeHeights": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "FontChanger.js": {
+            "name": "FontChanger.js",
+            "modules": {
+                "jQueryModule-FontChanger": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "SMARTPAGE.js": {
+            "name": "SMARTPAGE.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "YouTubePlayer.js": {
+            "name": "YouTubePlayer.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "CachedSlidehow": {
+            "name": "CachedSlidehow",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "CachedSlideshow.js",
+            "line": 2,
+            "description": "The \"equalizing module\", which is used for setting heights or widths of child-elements"
+        },
+        "CookieHandler": {
+            "name": "CookieHandler",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "CookieHandler.js",
+            "line": 1,
+            "description": "CookieHandler\nContains setter and getter functions for handling of cookies"
+        },
+        "EqualizeHeights": {
+            "name": "EqualizeHeights",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "EqualRowHeights.js",
+            "line": 2,
+            "description": "The \"equalizing module\", which is used for setting heights or widths of child-elements"
+        },
+        "jQueryModule-FontChanger": {
+            "name": "jQueryModule-FontChanger",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "FontChanger.js",
+            "line": 17,
+            "description": "The Font Changer module for jQuery"
+        }
+    },
+    "classes": {},
+    "elements": {},
+    "classitems": [
+        {
+            "file": "ext-libs\\jQuery-Equal-Heights.js",
+            "line": 2,
+            "description": "-------------------------------------------------------------------- \nJQuery Plugin: \"EqualHeights\" & \"EqualWidths\"\nby:\tScott Jehl, Todd Parker, Maggie Costello Wachs (http://www.filamentgroup.com)\nCopyright (c) 2007 Filament Group\nLicensed under GPL (http://www.opensource.org/licenses/gpl-license.php)\nDescription: Compares the heights or widths of the top-level children of a provided element \nand sets their min-height to the tallest height (or width to widest width). Sets in em units \nby default if pxToEm() method is available.\nDependencies: jQuery library, pxToEm method\t(article: http://www.filamentgroup.com/lab/retaining_scalable_interfaces_with_pixel_to_em_conversion/)\t\t\t\t\t\t\t  \nUsage Example: $(element).equalHeights();\nOptional: to set min-height in px, pass a true argument: $(element).equalHeights(true);\nVersion: 2.0, 07.24.2008\nChangelog:\n 08.02.2007 initial Version 1.0\n 07.24.2008 v 2.0 - added support for widths\n--------------------------------------------------------------------",
+            "itemtype": "method",
+            "name": "equalHeights",
+            "params": [
+                {
+                    "name": "px",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ThisExpression"
+            },
+            "class": ""
+        },
+        {
+            "file": "ext-libs\\jQuery-Equal-Heights.js",
+            "line": 38,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "equalWidths",
+            "params": [
+                {
+                    "name": "px",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ThisExpression"
+            },
+            "class": ""
+        },
+        {
+            "file": "ext-libs\\pxToEm.js",
+            "line": 28,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "pxToEm",
+            "params": [
+                {
+                    "name": "settings",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "result"
+            },
+            "class": ""
+        },
+        {
+            "file": "ext-libs\\pxToEm.js",
+            "line": 43,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getWindowWidth",
+            "return": {
+                "description": "LogicalExpression"
+            },
+            "class": ""
+        },
+        {
+            "file": "ext-libs\\pxToEm.js",
+            "line": 59,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "calcFontSize",
+            "return": {
+                "description": "BinaryExpression"
+            },
+            "class": ""
+        },
+        {
+            "file": "CachedSlideshow.js",
+            "line": 8,
+            "description": "Cashed Slideshow is a really simple slide show that uses simple fade to switch images.\nThe advantage is the cashing functionality that ensures images are loaded before the slideshow begins.\nNote: The slideshow element should be an <code>ul-tag</code> containing li-items with a-tags\n  <ul id=\"cachedSlideshow\"> \n     <li><img src=\"path/to/image1.jpg\" /></li>\n     .... \n     <li><img src=\"path/to/image8.jpg\" /></li>\n  </ul>\nTodo: Add other transitions between slides.",
+            "example": [
+                " "
+            ],
+            "version": "1.0",
+            "itemtype": "method",
+            "name": "initSlideShow",
+            "params": [
+                {
+                    "name": "el",
+                    "description": ""
+                },
+                {
+                    "name": "fadeSpeed",
+                    "description": ""
+                },
+                {
+                    "name": "delay",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "CachedSlidehow"
+        },
+        {
+            "file": "CachedSlideshow.js",
+            "line": 41,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "onload",
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "CachedSlidehow"
+        },
+        {
+            "file": "CachedSlideshow.js",
+            "line": 56,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "startSlideShow",
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "CachedSlidehow"
+        },
+        {
+            "file": "CookieHandler.js",
+            "line": 8,
+            "description": "Setter for cookies",
+            "itemtype": "method",
+            "name": "setCookie",
+            "params": [
+                {
+                    "name": "key",
+                    "description": ""
+                },
+                {
+                    "name": "value",
+                    "description": ""
+                },
+                {
+                    "name": "exdays",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "CookieHandler"
+        },
+        {
+            "file": "CookieHandler.js",
+            "line": 23,
+            "description": "Getter for cookies",
+            "itemtype": "method",
+            "name": "getCookie",
+            "params": [
+                {
+                    "name": "cname",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "Literal"
+            },
+            "class": "",
+            "module": "CookieHandler"
+        },
+        {
+            "file": "EqualRowHeights.js",
+            "line": 9,
+            "description": "Iterate elements takes some elements on the same row\n(i.e. generated items which spans over several BootStrap rows)\nIt measures the distance from the top of the page and groups the ones \nwith the same distance. (i.e. same distance to top === items on the same row)\nAfter each row is filled with items, some action is done to all items of that row.\nFor mobile viwes (<768px) the elements are placed underneath each other (one item on one row)",
+            "itemtype": "method",
+            "name": "alignChildrenOf",
+            "params": [
+                {
+                    "name": "container",
+                    "description": "The element whoose children should be aligned",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "EqualizeHeights"
+        },
+        {
+            "file": "EqualRowHeights.js",
+            "line": 73,
+            "description": "Limit events that are often called repeatedly, like resize",
+            "itemtype": "method",
+            "name": "onResizeEnd",
+            "return": {
+                "description": "callback that is fired n-milliseconds after the lates ocourrence of the specified event",
+                "type": "Function"
+            },
+            "class": "",
+            "module": "EqualizeHeights"
+        },
+        {
+            "file": "FontChanger.js",
+            "line": 35,
+            "description": "IncreaseFont adds a listener to <code>this</code> element \nand if clicked, it sets the font to font + 2 until the\nmaximum fontsize is reached.",
+            "itemtype": "method",
+            "name": "increaseFont",
+            "params": [
+                {
+                    "name": "opts",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ThisExpression"
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "FontChanger.js",
+            "line": 67,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "resetFont",
+            "params": [
+                {
+                    "name": "opts",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ThisExpression"
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "FontChanger.js",
+            "line": 94,
+            "description": "DecreaseFont adds a listener to <code>this</code> element \nand if clicked, it sets the font to font - 2 until the\nminimum fontsize is reached.",
+            "itemtype": "method",
+            "name": "decreaseFont",
+            "params": [
+                {
+                    "name": "opts",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ThisExpression"
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "FontChanger.js",
+            "line": 127,
+            "description": "Debugging purpose",
+            "itemtype": "method",
+            "name": "logFontSize",
+            "params": [
+                {
+                    "name": "newSize",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "SMARTPAGE.js",
+            "line": 3,
+            "description": "addTimedEvent\nAdd an eventListener to the <code>element</code> and specify a <code>delay</code> in ms\nThe eventlistener is delayed before it fires. This is useful for events that fire\nalot, and where only a single or two is needed. \nLike <code>resize-</code> or <code>scroll-events</code>",
+            "itemtype": "method",
+            "name": "addTimedEvent",
+            "params": [
+                {
+                    "name": "evnt",
+                    "description": ""
+                },
+                {
+                    "name": "delay",
+                    "description": ""
+                },
+                {
+                    "name": "el",
+                    "description": ""
+                },
+                {
+                    "name": "callback",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "YouTubePlayer.js",
+            "line": 1,
+            "description": "AddYtPlayerTo adds an makes a quick switch of <code>element</code> and \na YT.Player, fetching the YouTube Player API and loads the video. \nThis is done asynchronously.\n                              A list (of e.g. search results is also supported and \n                              may be implemented here at some point)",
+            "see": [
+                "The YouTube Player API V3: https://developers.google.com/youtube/v3"
+            ],
+            "itemtype": "method",
+            "name": "addYtPlayerTo",
+            "params": [
+                {
+                    "name": "elementID",
+                    "description": ""
+                },
+                {
+                    "name": "videoID",
+                    "description": ""
+                },
+                {
+                    "name": "width",
+                    "description": ""
+                },
+                {
+                    "name": "height",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "YouTubePlayer.js",
+            "line": 25,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "onYouTubePlayerAPIReady",
+            "return": {
+                "description": ""
+            },
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: version",
+            "line": " CachedSlideshow.js:8"
+        }
+    ]
+}

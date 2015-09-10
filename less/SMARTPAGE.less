@@ -2,5 +2,33 @@
  * SMARTPAGE Web Library
  * Stylesheet patterns
  *
- * /
+ */
  
+
+// == Full Page Background Image
+// Source: http://css-tricks.com/perfect-full-page-background-image/
+.cover {
+    background: url(images/cover-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    // Lt IE9 polyfill
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/cover-bg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/cover-bg.jpg', sizingMethod='scale')";
+}
+
+// == Force 100% Height (or width)
+// Note: As with all absolutely positioned elements, the parent must be positioned aswell. 
+// Normally position relative is the easist way
+.forceFullHeight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.forceFullWidth{
+    position: absolute;
+    left: 0;
+    right: 0;
+}

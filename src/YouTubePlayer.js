@@ -2,14 +2,15 @@
  * AddYtPlayerTo adds an makes a quick switch of <code>element</code> and 
  * a YT.Player, fetching the YouTube Player API and loads the video. 
  * This is done asynchronously.
- * @see The YouTube Player API V3: https://developers.google.com/youtube/v3
- * 
- * @param [string] elementID   - The element (preferably a div) replaced by an iFrame with the player
- * @param [string] videoID     - The id (hash) of the video which is to be played. 
  *                               A list (of e.g. search results is also supported and 
  *                               may be implemented here at some point)
- * @param [string] width       - The width of the iFrame player 
- * @param [string] height      - The height of the iFrame player 
+ * @see The YouTube Player API V3: https://developers.google.com/youtube/v3
+ * @method addYtPlayerTo
+ * @param {} elementID
+ * @param {} videoID
+ * @param {} width
+ * @param {} height
+ * @return 
  */
 function addYtPlayerTo(elementID, videoID, width, height) {
     // Load the IFrame Player API code asynchronously.
@@ -21,6 +22,11 @@ function addYtPlayerTo(elementID, videoID, width, height) {
     // Replace the 'ytplayer' element with an <iframe> and 
     // YouTube player after the API code downloads.
     var player;
+    /**
+     * Description
+     * @method onYouTubePlayerAPIReady
+     * @return 
+     */
     function onYouTubePlayerAPIReady() {
         player = new YT.Player(elementID, {
             height: height,

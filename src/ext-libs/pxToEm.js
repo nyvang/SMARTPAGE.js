@@ -24,7 +24,14 @@
  *		08.01.2008 - fixed font-size calculation for IE
 --------------------------------------------------------------------*/
 
-Number.prototype.pxToEm = String.prototype.pxToEm = function (settings) {
+Number.prototype.pxToEm = 
+/**
+  * Description
+  * @method pxToEm
+  * @param {} settings
+  * @return result
+  */
+ String.prototype.pxToEm = function (settings) {
     //set defaults
     settings = jQuery.extend({
         scope: 'body',
@@ -33,6 +40,11 @@ Number.prototype.pxToEm = String.prototype.pxToEm = function (settings) {
 
     var pxVal = (this == '') ? 0 : parseFloat(this);
     var scopeVal;
+    /**
+     * Description
+     * @method getWindowWidth
+     * @return LogicalExpression
+     */
     var getWindowWidth = function () {
         var de = document.documentElement;
         return self.innerWidth || (de && de.clientWidth) || document.body.clientWidth;
@@ -44,6 +56,11 @@ Number.prototype.pxToEm = String.prototype.pxToEm = function (settings) {
 		to get an accurate em value. */
 
     if (settings.scope == 'body' && $.browser.msie && (parseFloat($('body').css('font-size')) / getWindowWidth()).toFixed(1) > 0.0) {
+        /**
+         * Description
+         * @method calcFontSize
+         * @return BinaryExpression
+         */
         var calcFontSize = function () {
             return (parseFloat($('body').css('font-size')) / getWindowWidth()).toFixed(3) * 16;
         };
