@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>CachedSlidehow</title>
+    <title>FadeModule.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -81,30 +81,39 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>CachedSlidehow Module</h1>
-<div class="box clearfix meta">
+<h1 class="file-heading">File: FadeModule.js</h1>
 
+<div class="file">
+    <pre class="code prettyprint linenums">
+﻿/**
+ * Fading module allows several elements to fade one by one while waiting on the next element with a custom delay
+ * 
+ * @module FadingElements
+ */
 
-        <div class="foundat">
-            Defined in: <a href="../files/CachedSlideshow.js.html#l2"><code>CachedSlideshow.js:2</code></a>
-        </div>
-
-</div>
-
-
-<div class="box intro">
-    <p>The &quot;equalizing module&quot;, which is used for setting heights or widths of child-elements</p>
-
-</div>
-
-
-<div class="yui3-g">
-    <div class="yui3-u-1-2">
-    </div>
-
-
-    <div class="yui3-u-1-2">
-    </div>
+/**
+ * FadeElements 
+ * Provides a quick and handy helper that fades a set of elements. 
+ * Specify delay between each element and the fading time to adapt it for your specific needs
+ *  
+ * @example $(elements).fadeAll({ delay: 300, speed: 300 });
+ * @function FadeElements
+ * @param {Object} opts - Standard options object implemented with the commonly used extend-pattern.
+ * @default {delay: 500, speed: 500, easing: &#x27;swing&#x27;}
+ * 
+ * @returns {JQuery Static} - standard jQuery return of the reciever of the function
+ */
+$.fn.FadeElements = function (opts) {
+    var o = $.extend({
+        delay: 500, speed: 500, easing: &#x27;swing&#x27;
+    }, opts);
+    var $el = this;
+    for (var i = 0, d = 0, l = $el.length; i &lt; l; i++, d += o.delay) {
+        $el.eq(i).delay(d).fadeIn(o.speed, o.easing);
+    }
+    return $el;
+}
+    </pre>
 </div>
                     </div>
                 </div>

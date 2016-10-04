@@ -45,7 +45,9 @@
                                 <li><a href="../modules/CachedSlidehow.html">CachedSlidehow</a></li>
                                 <li><a href="../modules/CookieHandler.html">CookieHandler</a></li>
                                 <li><a href="../modules/EqualizeHeights.html">EqualizeHeights</a></li>
+                                <li><a href="../modules/FadingElements.html">FadingElements</a></li>
                                 <li><a href="../modules/jQueryModule-FontChanger.html">jQueryModule-FontChanger</a></li>
+                                <li><a href="../modules/TextModule.html">TextModule</a></li>
                             </ul>
                         </div>
                     </div>
@@ -83,7 +85,36 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
+/**
+ * Project:             SMARTPAGE WEB Library
+ * Summary:             A collection offrequently use JS and CSS tools and helperfunctions
+ * Version:             0.2.0
+ *  
+ * Author:              N. Nyvang               
+ * Company:             SMARTPAGE A/S
+ * Web:                 http://smartpage.dk
+ */
 
+/**
+ * Notes:
+ * 
+ * The library has been build by the Module design pattern to maximize modulation
+ * and to create a namespace-alike to keep variables from collisions. 
+ */
+
+
+var WebLib = (function (window, underfined) {
+
+    var settings = {};
+
+    function WebLib() {
+
+        //this
+        
+    }
+
+
+})(window);
 
 /**
  * addTimedEvent
@@ -98,7 +129,7 @@
  * @param {} callback
  * @return 
  */
-function addTimedEvent (evnt, delay, el, callback) {
+function addTimedEvent(evnt, delay, el, callback) {
     var t;
     $(el).bind(evnt, function (delay) {
         t &amp;&amp; clearTimeout(t);

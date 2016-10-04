@@ -13,7 +13,7 @@
  * @param {Number} length - the maximum allowed number of words in the excerpt
  * @return {String} the new excerpt-string
  */
-function customExcerpt(str, maxLength, useASCIIor) {
+function customExcerpt(str, maxLength) {
     var words = str.split(' ');
     words.splice(maxLength, words.length - 1);
     return words.join(' ') + 

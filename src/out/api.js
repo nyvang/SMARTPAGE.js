@@ -5,6 +5,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "CachedSlidehow",
         "CookieHandler",
         "EqualizeHeights",
+        "FadingElements",
+        "TextModule",
         "jQueryModule-FontChanger"
     ],
     "allModules": [
@@ -24,9 +26,19 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "The \"equalizing module\", which is used for setting heights or widths of child-elements"
         },
         {
+            "displayName": "FadingElements",
+            "name": "FadingElements",
+            "description": "Fading module allows several elements to fade one by one while waiting on the next element with a custom delay"
+        },
+        {
             "displayName": "jQueryModule-FontChanger",
             "name": "jQueryModule-FontChanger",
             "description": "The Font Changer module for jQuery"
+        },
+        {
+            "displayName": "TextModule",
+            "name": "TextModule",
+            "description": "Text module.\nIntroduces several handy methods for transforming and displaying text in different ways"
         }
     ],
     "elements": []

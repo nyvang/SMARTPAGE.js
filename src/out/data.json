@@ -42,6 +42,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "FadeModule.js": {
+            "name": "FadeModule.js",
+            "modules": {
+                "FadingElements": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "FontChanger.js": {
             "name": "FontChanger.js",
             "modules": {
@@ -54,6 +63,15 @@
         "SMARTPAGE.js": {
             "name": "SMARTPAGE.js",
             "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "TextModule.js": {
+            "name": "TextModule.js",
+            "modules": {
+                "TextModule": 1
+            },
             "classes": {},
             "fors": {},
             "namespaces": {}
@@ -103,6 +121,18 @@
             "line": 2,
             "description": "The \"equalizing module\", which is used for setting heights or widths of child-elements"
         },
+        "FadingElements": {
+            "name": "FadingElements",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "FadeModule.js",
+            "line": 1,
+            "description": "Fading module allows several elements to fade one by one while waiting on the next element with a custom delay"
+        },
         "jQueryModule-FontChanger": {
             "name": "jQueryModule-FontChanger",
             "submodules": {},
@@ -114,6 +144,18 @@
             "file": "FontChanger.js",
             "line": 17,
             "description": "The Font Changer module for jQuery"
+        },
+        "TextModule": {
+            "name": "TextModule",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "TextModule.js",
+            "line": 1,
+            "description": "Text module.\nIntroduces several handy methods for transforming and displaying text in different ways"
         }
     },
     "classes": {},
@@ -320,6 +362,30 @@
             "module": "EqualizeHeights"
         },
         {
+            "file": "FadeModule.js",
+            "line": 7,
+            "description": "FadeElements \nProvides a quick and handy helper that fades a set of elements. \nSpecify delay between each element and the fading time to adapt it for your specific needs",
+            "example": [
+                " $(elements).fadeAll({ delay: 300, speed: 300 });"
+            ],
+            "itemtype": "method",
+            "name": "FadeElements",
+            "params": [
+                {
+                    "name": "opts",
+                    "description": "- Standard options object implemented with the commonly used extend-pattern.",
+                    "type": "Object"
+                }
+            ],
+            "default": "{delay: 500, speed: 500, easing: 'swing'}",
+            "return": {
+                "description": "- standard jQuery return of the reciever of the function",
+                "type": "JQuery Static"
+            },
+            "class": "",
+            "module": "FadingElements"
+        },
+        {
             "file": "FontChanger.js",
             "line": 35,
             "description": "IncreaseFont adds a listener to <code>this</code> element \nand if clicked, it sets the font to font + 2 until the\nmaximum fontsize is reached.",
@@ -393,7 +459,21 @@
         },
         {
             "file": "SMARTPAGE.js",
-            "line": 3,
+            "line": 1,
+            "description": "Project:             SMARTPAGE WEB Library\nSummary:             A collection offrequently use JS and CSS tools and helperfunctions\nVersion:             0.2.0\n \nAuthor:              N. Nyvang               \nCompany:             SMARTPAGE A/S\nWeb:                 http://smartpage.dk",
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "SMARTPAGE.js",
+            "line": 11,
+            "description": "Notes:\n\nThe library has been build by the Module design pattern to maximize modulation\nand to create a namespace-alike to keep variables from collisions.",
+            "class": "",
+            "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "SMARTPAGE.js",
+            "line": 32,
             "description": "addTimedEvent\nAdd an eventListener to the <code>element</code> and specify a <code>delay</code> in ms\nThe eventlistener is delayed before it fires. This is useful for events that fire\nalot, and where only a single or two is needed. \nLike <code>resize-</code> or <code>scroll-events</code>",
             "itemtype": "method",
             "name": "addTimedEvent",
@@ -420,6 +500,31 @@
             },
             "class": "",
             "module": "jQueryModule-FontChanger"
+        },
+        {
+            "file": "TextModule.js",
+            "line": 8,
+            "description": "Reducing text by word limit",
+            "itemtype": "method",
+            "name": "customExcerpt",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "- the string representation of the excerpt",
+                    "type": "String"
+                },
+                {
+                    "name": "length",
+                    "description": "- the maximum allowed number of words in the excerpt",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the new excerpt-string",
+                "type": "String"
+            },
+            "class": "",
+            "module": "TextModule"
         },
         {
             "file": "YouTubePlayer.js",
@@ -452,7 +557,7 @@
                 "description": ""
             },
             "class": "",
-            "module": "jQueryModule-FontChanger"
+            "module": "TextModule"
         },
         {
             "file": "YouTubePlayer.js",
@@ -464,13 +569,29 @@
                 "description": ""
             },
             "class": "",
-            "module": "jQueryModule-FontChanger"
+            "module": "TextModule"
         }
     ],
     "warnings": [
         {
             "message": "unknown tag: version",
             "line": " CachedSlideshow.js:8"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " FadeModule.js:7"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " FadeModule.js:7"
+        },
+        {
+            "message": "Missing item type\nProject:             SMARTPAGE WEB Library\nSummary:             A collection offrequently use JS and CSS tools and helperfunctions\nVersion:             0.2.0\n \nAuthor:              N. Nyvang               \nCompany:             SMARTPAGE A/S\nWeb:                 http://smartpage.dk",
+            "line": " SMARTPAGE.js:1"
+        },
+        {
+            "message": "Missing item type\nNotes:\n\nThe library has been build by the Module design pattern to maximize modulation\nand to create a namespace-alike to keep variables from collisions.",
+            "line": " SMARTPAGE.js:11"
         }
     ]
 }

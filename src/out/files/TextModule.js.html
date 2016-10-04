@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>CachedSlidehow</title>
+    <title>TextModule.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -81,30 +81,32 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>CachedSlidehow Module</h1>
-<div class="box clearfix meta">
+<h1 class="file-heading">File: TextModule.js</h1>
 
+<div class="file">
+    <pre class="code prettyprint linenums">
+﻿/**
+ * Text module.
+ * Introduces several handy methods for transforming and displaying text in different ways
+ * 
+ * @module TextModule
+ */
 
-        <div class="foundat">
-            Defined in: <a href="../files/CachedSlideshow.js.html#l2"><code>CachedSlideshow.js:2</code></a>
-        </div>
-
-</div>
-
-
-<div class="box intro">
-    <p>The &quot;equalizing module&quot;, which is used for setting heights or widths of child-elements</p>
-
-</div>
-
-
-<div class="yui3-g">
-    <div class="yui3-u-1-2">
-    </div>
-
-
-    <div class="yui3-u-1-2">
-    </div>
+/**
+ * Reducing text by word limit
+ * 
+ * @method customExcerpt
+ * @param {String} str - the string representation of the excerpt
+ * @param {Number} length - the maximum allowed number of words in the excerpt
+ * @return {String} the new excerpt-string
+ */
+function customExcerpt(str, maxLength, useASCIIor) {
+    var words = str.split(&#x27; &#x27;);
+    words.splice(maxLength, words.length - 1);
+    return words.join(&#x27; &#x27;) + 
+      (words.length !== str.split(&#x27; &#x27;).length ? &#x27;&amp;hellip;&#x27; : &#x27;&#x27;);
+}
+    </pre>
 </div>
                     </div>
                 </div>
